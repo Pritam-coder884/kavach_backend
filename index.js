@@ -21,6 +21,9 @@ async function main() {
   
 
   // Set up the API endpoint to retrieve all documents in the collection
+  app.get('/',async(req,res)=>{
+    res.send("connected to api"); 
+  })
 
   app.get('/api/trial1/prt', async (req, res) => {
     try {
@@ -73,3 +76,5 @@ const PORT = 1800;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
+
+module.exports = app
